@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/images_nav_graph"
+    app:startDestination="@id/imagesHomeFragment">
+
+    <fragment
+        android:id="@+id/imagesHomeFragment"
+        android:name="com.eveno.zedgeoppgave.view.fragments.ImagesHomeFragment"
+        android:label="ImagesHomeFragment" >
+        <action
+            android:id="@+id/action_imagesHomeFragment_to_imagesMoreInfoFragment"
+            app:destination="@id/imagesMoreInfoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/imagesMoreInfoFragment"
+        android:name="com.eveno.zedgeoppgave.view.fragments.ImagesMoreInfoFragment"
+        android:label="ImagesMoreInfoFragment" />
+    <fragment
+        android:id="@+id/imagesSavedFragment"
+        android:name="com.eveno.zedgeoppgave.view.fragments.ImagesSavedFragment"
+        android:label="ImagesSavedFragment" >
+        <action
+            android:id="@+id/action_imagesSavedFragment_to_imagesMoreInfoFragment"
+            app:destination="@id/imagesMoreInfoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/imagesSearchFragment"
+        android:name="com.eveno.zedgeoppgave.view.fragments.ImagesSearchFragment"
+        android:label="ImagesSearchFragment" >
+        <action
+            android:id="@+id/action_imagesSearchFragment_to_imagesMoreInfoFragment"
+            app:destination="@id/imagesMoreInfoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+</navigation>
