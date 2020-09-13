@@ -1,4 +1,4 @@
-package com.eveno.zedgehjemmeoppgave.util
+package com.eveno.zedgeoppgave.util
 
 class Constants {
 

@@ -6,10 +6,10 @@ import androidx.room.PrimaryKey
 @Entity(
     tableName = "images"
 )
-
-data class Image(
+data class Hit(
+    //hit id er da bildene sin id i databasen
     @PrimaryKey(autoGenerate = true)
-    var idTable: Int? = null,
+    var hitId: Int? = null,
     val comments: Int,
     val downloads: Int,
     val favorites: Int,
