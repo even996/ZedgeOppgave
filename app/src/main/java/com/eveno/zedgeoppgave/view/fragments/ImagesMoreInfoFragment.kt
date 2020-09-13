@@ -1,5 +1,6 @@
 package com.eveno.zedgeoppgave.view.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.webkit.WebViewClient
@@ -27,6 +28,15 @@ class ImagesMoreInfoFragment : Fragment(R.layout.fragment_more_info) {
         fav_button.setOnClickListener {
             viewModel.saveImage(hit)
             Snackbar.make(view, "Image saved successfully", Snackbar.LENGTH_SHORT).show()
+        }
+
+        share_button.setOnClickListener {
+            var shareIntent = Intent().apply {
+                this.action = Intent.ACTION_SEND
+                this.putExtra(Intent.EXTRA_TEXT, hit.largeImageURL)
+                this.type = "text/plain"
+            }
+            startActivity(shareIntent)
         }
     }
 }
