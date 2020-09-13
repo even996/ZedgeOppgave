@@ -4,7 +4,7 @@ import com.eveno.zedgeoppgave.models.Hit
 
 data class ImageResponse(
     // hit er da bildene
-    val hits: List<Hit>,
+    val hits: MutableList<Hit>,
     val total: Int,
     val totalHits: Int
 )

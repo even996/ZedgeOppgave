@@ -2,6 +2,7 @@ package com.eveno.zedgeoppgave.models
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
 @Entity(
     tableName = "images"
@@ -32,4 +33,4 @@ data class Hit(
     val webformatHeight: Int,
     val webformatURL: String,
     val webformatWidth: Int
-)
+) : Serializable

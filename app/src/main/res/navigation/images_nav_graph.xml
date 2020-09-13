@@ -20,7 +20,11 @@
     <fragment
         android:id="@+id/imagesMoreInfoFragment"
         android:name="com.eveno.zedgeoppgave.view.fragments.ImagesMoreInfoFragment"
-        android:label="ImagesMoreInfoFragment" />
+        android:label="ImagesMoreInfoFragment" >
+        <argument
+            android:name="hit"
+            app:argType="com.eveno.zedgeoppgave.models.Hit" />
+    </fragment>
     <fragment
         android:id="@+id/imagesSavedFragment"
         android:name="com.eveno.zedgeoppgave.view.fragments.ImagesSavedFragment"

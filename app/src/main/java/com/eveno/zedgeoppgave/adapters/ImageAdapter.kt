@@ -46,10 +46,10 @@ class ImageAdapter : RecyclerView.Adapter<ImageAdapter.ImageViewHolder>() {
         val image = differ.currentList[position]
         holder.itemView.apply {
             Glide.with(this).load(image.largeImageURL).into(ivImage)
-            tvSource.text = image.user
-            tvTitle.text = image.user
-            tvDescription.text = image.user
-            tvPublishedAt.text = image.user
+            //tvSource.text = image.user
+            tvTitle.text = "by: " + image.user
+            tvDescription.text = "#"+image.tags
+            //tvPublishedAt.text = image.user
             setOnClickListener {
                 onItemClickListener?.let { it(image) }
 
